@@ -176,6 +176,8 @@ if ($FORCE_MODE && !$statinfo["errors"]) {
 
 	    // Add unique internal CSV-file to the git tree
 	    $dummy = "History/$table/$upload.csv";
+	    if (!is_dir("History/$table"))
+		@mkdir("History/$table", 0755, true);
 	    @copy($tmpcsv, $dummy);
 	    $dummy = `git add "$dummy" 2>&1`;
 	}
