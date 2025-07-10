@@ -7,8 +7,8 @@ $jscond = ($group_by == MAKE_JAVASCRIPT);
 switch ($platform) {
     case 'P11':
 	$categoryColumn = 12; // начиная с нуля
-    $pageTitle = 'Совместимость с дистрибутивами Альт на одиннадцатой платформе';
-    $pageDescription = 'Совместимость с дистрибутивами Альт на одиннадцатой платформе для x86_64, aarch64, e2kv4, e2kv5, e2kv6'; // e2kv4,e2kv5,e2kv6
+	$pageTitle = 'Совместимость с дистрибутивами Альт на одиннадцатой платформе';
+	$pageDescription = 'Совместимость с дистрибутивами Альт на одиннадцатой платформе для x86_64, aarch64, e2kv4, e2kv5, e2kv6';
 	$pageHeader = 'Совместимость с дистрибутивами Альт';
 	break;
     case 'P10':
@@ -28,6 +28,18 @@ switch ($platform) {
 	$pageTitle  = 'Совместимость с устаревшими дистрибутивами Альт 8 СП';
 	$pageDescription = 'Совместимость с устаревшими дистрибутивами Альт 8 СП для x86_64, i586, e2k, e2kv4';
 	$pageHeader = 'Совместимость с устаревшими дистрибутивами Альт 8 СП';
+	break;
+    case 'D11':
+	$categoryColumn = 8;  // начиная с нуля
+	$pageTitle  = 'Совместимость с технологией Альт Домен на одиннадцатой платформе';
+	$pageDescription = 'Совместимость с Альт Домен 11 для x86_64, aarch64, e2kv4, e2kv5, e2kv6';
+	$pageHeader = 'Совместимость с Альт Домен 11';
+	break;
+    case 'S11':
+	$categoryColumn = 8;  // начиная с нуля
+	$pageTitle  = 'Совместимость с дистрибутивом Simply Linux 11';
+	$pageDescription = 'Совместимость с дистрибутивом Simply Linux 11 для x86_64, aarch64, e2kv4, e2kv5, e2kv6';
+	$pageHeader = 'Совместимость с дистрибутивом Simply Linux 11';
 	break;
     case 'S10':
 	$categoryColumn = 8;  // начиная с нуля
@@ -387,7 +399,7 @@ function makeTabelHeaders($a, $platform, $view): string
     global $fcol;
 
     $help = '<a href="https://www.altlinux.org/" target="_blank" title="Инструкции по установке для дистрибутивов Альт на бранче ' .
-	    htmlspecialchars($platform) .
+	    htmlspecialchars(($platform == 'S11' || $platform == 'D11') ? 'P11': (($platform == 'S10') ? 'P10': $platform)) .
 	    ' (в стадии наполнения). Если не указано, поищите на нашей ВиКи или запросите в отделе продаж.">HELP</a>';
 
     if ($platform == 'P11') {
@@ -396,9 +408,9 @@ function makeTabelHeaders($a, $platform, $view): string
                 <th rowspan="2" class="product">' . (($view == 'category') ? 'Категория, продукт, производитель' : 'Производитель, продукт') . '</th>
                 <th rowspan="2" class="help">' . $help . '</th>
                 <th colspan="2" class="cell">' . (($a != 'x86_64' && $a != 'aarch64') ? '&nbsp;' : 'Альт&nbsp;СП&nbsp;релиз&nbsp;11') . '</th>
-                <th rowspan="2" class="cell">' . (($a == 'ppc64le') ? '&nbsp;' : 'Альт Рабочая станция 11') . '</th>
-                <th rowspan="2" class="cell">' . (($a == 'ppc64le') ? '&nbsp;' : 'Альт Образование 11') . '</th>
-                <th rowspan="2" class="cell">Альт Сервер 10</th>
+                <th rowspan="2" class="cell">Альт&nbsp;Рабочая&nbsp;станция&nbsp;11</th>
+                <th rowspan="2" class="cell">Альт&nbsp;Образование&nbsp;11</th>
+                <th rowspan="2" class="cell">Альт&nbsp;Сервер&nbsp;11</th>
             <tr><th class="small">' . (($a != 'x86_64' && $a != 'aarch64') ? '&nbsp;' : '(рабочая&nbsp;станция)') . '</th><th class="small">' . (($a != 'x86_64' && $a != 'aarch64') ? '&nbsp;' : '(сервер)') . '</th></tr>
             </tr>
         ';
@@ -408,9 +420,9 @@ function makeTabelHeaders($a, $platform, $view): string
                 <th rowspan="2" class="product">' . (($view == 'category') ? 'Категория, продукт, производитель' : 'Производитель, продукт') . '</th>
                 <th rowspan="2" class="help">' . $help . '</th>
                 <th colspan="2" class="cell">' . (($a != 'x86_64' && $a != 'aarch64') ? '&nbsp;' : 'Альт&nbsp;СП&nbsp;релиз&nbsp;10') . '</th>
-                <th rowspan="2" class="cell">' . (($a == 'ppc64le') ? '&nbsp;' : 'Альт Рабочая станция 10') . '</th>
-                <th rowspan="2" class="cell">' . (($a == 'ppc64le') ? '&nbsp;' : 'Альт Образование 10') . '</th>
-                <th rowspan="2" class="cell">Альт Сервер 10</th>
+                <th rowspan="2" class="cell">' . (($a == 'ppc64le') ? '&nbsp;' : 'Альт&nbsp;Рабочая&nbsp;станция&nbsp;10') . '</th>
+                <th rowspan="2" class="cell">' . (($a == 'ppc64le') ? '&nbsp;' : 'Альт&nbsp;Образование&nbsp;10') . '</th>
+                <th rowspan="2" class="cell">Альт&nbsp;Сервер&nbsp;10</th>
             <tr><th class="small">' . (($a != 'x86_64' && $a != 'aarch64') ? '&nbsp;' : '(рабочая&nbsp;станция)') . '</th><th class="small">' . (($a != 'x86_64' && $a != 'aarch64') ? '&nbsp;' : '(сервер)') . '</th></tr>
             </tr>
         ';
@@ -422,7 +434,7 @@ function makeTabelHeaders($a, $platform, $view): string
                 <th colspan="2" class="cell">' . (($a == 'mipsel') ? '&nbsp;' : 'Альт&nbsp;8&nbsp;СП') . '</th>
                 <th rowspan="2" class="cell">' . (($a == 'ppc64le') ? '&nbsp;' : 'Альт&nbsp;Рабочая&nbsp;станция&nbsp;9') . '</th>
                 <th rowspan="2" class="cell">' . (($a == 'armh' || $a == 'mipsel' || $a == 'ppc64le') ? '&nbsp;' : 'Альт&nbsp;Образование&nbsp;9') . '</th>
-                <th rowspan="2" class="cell">' . (($a == 'i586' || $a == 'armh' || $a == 'mipsel') ? '&nbsp;' : 'Альт Сервер 9') . '</th>
+                <th rowspan="2" class="cell">' . (($a == 'i586' || $a == 'armh' || $a == 'mipsel') ? '&nbsp;' : 'Альт&nbsp;Сервер&nbsp;9') . '</th>
             </tr>
             <tr><th class="small">' . (($a == 'mipsel' || $a == 'ppc64le') ? '&nbsp;' : '(рабочая&nbsp;станция)') . '</th><th class="small">' . (($a == 'mipsel') ? '&nbsp;' : '(сервер)') . '</th></tr>
         ';
@@ -436,13 +448,30 @@ function makeTabelHeaders($a, $platform, $view): string
             </tr>
             <tr><th class="small">(рабочая&nbsp;станция)</th><th class="small">(сервер)</th></tr>
         ';
-
+    } elseif ($platform == 'D11') {
+        $result = '
+            <tr>
+                <th class="product">' . $fcol . '</th>
+                <th class="help">' . $help . '</th>
+                <th class="cell">Альт&nbsp;Домен&nbsp;11</th>
+                <th class="empty">&nbsp;</th>
+            </tr>
+        ';
+    } elseif ($platform == 'S11') {
+        $result = '
+            <tr>
+                <th class="product">' . $fcol . '</th>
+                <th class="help">' . $help . '</th>
+                <th class="cell">Simply&nbsp;Linux&nbsp;11</th>
+                <th class="empty">&nbsp;</th>
+            </tr>
+        ';
     } elseif ($platform == 'S10') {
         $result = '
             <tr>
                 <th class="product">' . $fcol . '</th>
                 <th class="help">' . $help . '</th>
-                <th class="cell">Simply Linux 10</th>
+                <th class="cell">Simply&nbsp;Linux&nbsp;10</th>
                 <th class="empty">&nbsp;</th>
             </tr>
         ';
@@ -486,6 +515,16 @@ function makeTabelCells($product, $platform): string
                 <td class="empty">&nbsp;</td>
         ';
 
+    } elseif ($platform == 'D11') {
+        $result = '
+                ' . makeSert($product[7]) . '
+                <td class="empty">&nbsp;</td>
+        ';
+    } elseif ($platform == 'S11') {
+        $result = '
+                ' . makeSert($product[7]) . '
+                <td class="empty">&nbsp;</td>
+        ';
     } elseif ($platform == 'S10') {
         $result = '
                 ' . makeSert($product[7]) . '
@@ -508,6 +547,10 @@ function makeTabelColspan($platform): string
         $result = 7;
     } elseif ($platform == '8SP') {
         $result = 5;
+    } elseif ($platform == 'D11') {
+        $result = 4;
+    } elseif ($platform == 'S11') {
+        $result = 4;
     } elseif ($platform == 'S10') {
         $result = 4;
     } else {
@@ -516,7 +559,6 @@ function makeTabelColspan($platform): string
 
     return $result;
 }
-
 
 function makeTabel($archCats): string
 {

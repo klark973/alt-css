@@ -6,7 +6,7 @@
 # version 3, or (at your option) any later version, which
 # should be included with sources as the file COPYING.
 #
-# Copyright (C) 2020-2023, Leonid Krivoshein <klark@altlinux.org>
+# Copyright (C) 2020-2025, Leonid Krivoshein <klark@altlinux.org>
 #
 
 . /etc/css/csi-server.conf
@@ -49,7 +49,7 @@ echo "Creating static HTML content..."
 rm -rf --one-file-system -- "$overlay"/CSI-cache.next
 ln -snf -- "$overlay"/CSI-cache "$overlay"/CSI-cache.next
 cd "$overlay"/CSI-cache/
-for t in P9 P10 S10 8SP; do
+for t in P9 P10 P11 S10 8SP; do
 	[ -s "$t.csv" ] ||
 		continue
 	cat >query.yml <<-EOF

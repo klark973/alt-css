@@ -7,7 +7,7 @@ function reindex_compatibility($tabId) {
     if (!isset($q_index))
 	$q_index = cache2arr("abc");
     $citab = $saved_notes = array();
-    $tableId = ($tabId == "S10") ? "P10": $tabId;
+    $tableId = ($tabId == "S11" || $tabId == "D11") ? "P11": (($tabId == "S10") ? "P10": $tabId);
 
     // Hardware platforms order
     $platforms = array_flip(array_keys( $hw_platforms ));

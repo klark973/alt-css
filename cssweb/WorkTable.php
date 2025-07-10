@@ -58,7 +58,16 @@ define("ONLY_SR9",	14);
 define("ONLY_SV9",	15);
 define("ONLY_WS10SP",	16);
 define("ONLY_SR10SP",	17);
-define("ONLY_DISTRO",	18);
+define("ONLY_SM11",	18);
+define("ONLY_WS11",	19);
+define("ONLY_WK11",	20);
+define("ONLY_ED11",	21);
+define("ONLY_SR11",	22);
+define("ONLY_SV11",	23);
+define("ONLY_WS11SP",	24);
+define("ONLY_SR11SP",	25);
+define("ONLY_AD11",	26);
+define("ONLY_DISTRO",	27);
 //
 define("ONLY_SOFTWARE",	1);
 define("ONLY_HARDWARE",	2);

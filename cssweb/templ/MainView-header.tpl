@@ -63,10 +63,19 @@ a:link, a:visited { color:#00f; text-decoration:none; }
  <option value="0" selected="selected">Не имеет значения</option>
  <option value="1">Любые настольные решения</option>
  <option value="2">Любые серверные решения</option>
+ <option value="24">Альт СП Рабочая станция, релиз 11</option>
+ <option value="25">Альт СП Сервер, релиз 11</option>
  <option value="16">Альт СП Рабочая станция, релиз 10</option>
  <option value="17">Альт СП Сервер, релиз 10</option>
  <option value="3">Альт 8 СП Рабочая станция</option>
  <option value="4">Альт 8 СП Сервер</option>
+ <option value="18">Simply Linux 11</option>
+ <option value="19">Альт Рабочая станция 11</option>
+ <option value="20">Альт Рабочая станция К 11</option>
+ <option value="21">Альт Образование 11</option>
+ <option value="22">Альт Сервер 11</option>
+ <option value="23">Альт Виртуализация 11</option>
+ <option value="26">Альт Домен 11</option>
  <option value="5">Simply Linux 10</option>
  <option value="6">Альт Рабочая станция 10</option>
  <option value="7">Альт Рабочая станция К 10</option>
@@ -118,6 +127,9 @@ a:link, a:visited { color:#00f; text-decoration:none; }
 </td></tr>
 <tr><td colspan="2">&nbsp;</td></tr>
 <tr><td colspan="2" class="group">ПОЛЕЗНЫЕ ССЫЛКИ</td></tr>
+<tr><td class="left">Совместимость&nbsp;D11:</td><td class="right">[<a href="TabDiffView.php?t=D11&amp;e=on" target="_blank" title="Открыть в новом окне">Разница</a>] [<a href="CompTableView.php?t=D11&amp;v=2&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;категориям</a>] [<a href="CompTableView.php?t=D11&amp;v=1&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;вендорам</a>] [<a href="CompTableView.php?t=D11&amp;v=0&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;продуктам</a>]</td></tr>
+<tr><td class="left">Совместимость&nbsp;S11:</td><td class="right">[<a href="TabDiffView.php?t=S11&amp;e=on" target="_blank" title="Открыть в новом окне">Разница</a>] [<a href="CompTableView.php?t=S11&amp;v=2&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;категориям</a>] [<a href="CompTableView.php?t=S11&amp;v=1&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;вендорам</a>] [<a href="CompTableView.php?t=S11&amp;v=0&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;продуктам</a>]</td></tr>
+<tr><td class="left">Совместимость&nbsp;P11:</td><td class="right">[<a href="TabDiffView.php?t=P11&amp;e=on" target="_blank" title="Открыть в новом окне">Разница</a>] [<a href="CompTableView.php?t=P11&amp;v=2&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;категориям</a>] [<a href="CompTableView.php?t=P11&amp;v=1&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;вендорам</a>] [<a href="CompTableView.php?t=P11&amp;v=0&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;продуктам</a>]</td></tr>
 <tr><td class="left">Совместимость&nbsp;S10:</td><td class="right">[<a href="TabDiffView.php?t=S10&amp;e=on" target="_blank" title="Открыть в новом окне">Разница</a>] [<a href="CompTableView.php?t=S10&amp;v=2&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;категориям</a>] [<a href="CompTableView.php?t=S10&amp;v=1&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;вендорам</a>] [<a href="CompTableView.php?t=S10&amp;v=0&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;продуктам</a>]</td></tr>
 <tr><td class="left">Совместимость&nbsp;P10:</td><td class="right">[<a href="TabDiffView.php?t=P10&amp;e=on" target="_blank" title="Открыть в новом окне">Разница</a>] [<a href="CompTableView.php?t=P10&amp;v=2&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;категориям</a>] [<a href="CompTableView.php?t=P10&amp;v=1&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;вендорам</a>] [<a href="CompTableView.php?t=P10&amp;v=0&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;продуктам</a>]</td></tr>
 <tr><td class="left">Совместимость&nbsp;P9:</td><td class="right">[<a href="TabDiffView.php?t=P9&amp;e=on" target="_blank" title="Открыть в новом окне">Разница</a>] [<a href="CompTableView.php?t=P9&amp;v=2&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;категориям</a>] [<a href="CompTableView.php?t=P9&amp;v=1&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;вендорам</a>] [<a href="CompTableView.php?t=P9&amp;v=0&amp;e=on" target="_blank" title="Открыть в новом окне">По&nbsp;продуктам</a>]</td></tr>

@@ -41,7 +41,7 @@
             <p>Последнее обновление:
                 <a href="<?= $platform ?>.csv" title="Скачать таблицу в формате CSV"><?= $pubdate ?></a>,
                 служба обеспечения совместимости
-                <a href="mailto:gost@basealt.ru" title="Отправить письмо...">&lt;gost@basealt.ru&gt;</a></p>
+                <a href="https://www.basealt.ru/gost" title="Отправить запрос...">[связаться]</a></p>
         </div>
     </div>
         <div id="section1">

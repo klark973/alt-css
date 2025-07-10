@@ -14,6 +14,8 @@ $hw_platforms = array (
     "e2k"     => "Эльбрус, v3",
     "e2kv4"   => "Эльбрус, v4",
     "e2kv5"   => "Эльбрус, v5",
+    "e2kv6"   => "Эльбрус, v6",
+    "e2kv7"   => "Эльбрус, v7",
     "mipsel"  => "MIPS32/LE",
     "ppc64le" => "Power 8/9, OpenPower",
 );
@@ -41,6 +43,19 @@ $comp_ext_rules = array (
     "S10" => array (
 	"p10smp" => ":",
     ),
+    "P11" => array (
+	"c11fws" => ":c11fsrv",
+	"c11fsrv"=> "c11fws:",
+	"p11ws"  => "p11edu:p11edu,p11srv",
+	"p11edu" => "p11ws:p11srv",
+	"p11srv" => "p11ws,p11edu:p11edu",
+    ),
+    "D11" => array (
+	"p11ad" => ":",
+    ),
+    "S11" => array (
+	"p11smp" => ":",
+    ),
 );
 
 // Available platforms for the table columns
@@ -57,14 +72,27 @@ $avail_platforms = array (
 	"p9srv"  => "x86_64,aarch64,e2k,e2kv4,ppc64le",
     ),
     "P10" => array (
-	"c10fws" => "x86_64,aarch64",
-	"c10fsrv"=> "x86_64,aarch64",
+	"c10fws" => "x86_64,aarch64,e2kv4",
+	"c10fsrv"=> "x86_64,aarch64,e2kv4",
 	"p10ws"  => "x86_64,i586,aarch64,e2k,e2kv4,e2kv5",
 	"p10edu" => "x86_64,i586,aarch64,e2k,e2kv4,e2kv5",
 	"p10srv" => "x86_64,aarch64,e2k,e2kv4,e2kv5,ppc64le",
     ),
     "S10" => array (
 	"p10smp" => "x86_64,i586,aarch64",
+    ),
+    "P11" => array (
+	"c11fws" => "x86_64,aarch64,e2kv4,e2kv5,e2kv6",
+	"c11fsrv"=> "x86_64,aarch64,e2kv4,e2kv5,e2kv6",
+	"p11ws"  => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
+	"p11edu" => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
+	"p11srv" => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
+    ),
+    "D11" => array (
+	"p11ad"  => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
+    ),
+    "S11" => array (
+	"p11smp" => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
     ),
 );
 
