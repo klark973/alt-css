@@ -473,10 +473,19 @@ foreach ($q_index as $index) {
 	    switch ($selectDistro) {
 		case ONLY_DESKTOP: $regex = "/^(ws|wk|ed|sm)/";	break;
 		case ONLY_SERVER:  $regex = "/^(sr|sv|ed)/";	break;
+		case ONLY_WS11SP:  $regex = "/^ws11[1-9]?sp/";	break;
+		case ONLY_SR11SP:  $regex = "/^sr11[1-9]?sp/";	break;
 		case ONLY_WS10SP:  $regex = "/^ws10[1-9]?sp/";	break;
 		case ONLY_SR10SP:  $regex = "/^sr10[1-9]?sp/";	break;
 		case ONLY_WS8SP:   $regex = "/^ws8[1-9]?sp/";	break;
 		case ONLY_SR8SP:   $regex = "/^sr8[1-9]?sp/";	break;
+		case ONLY_SM11:	   $regex = "/^sm11/";		break;
+		case ONLY_WS11:	   $regex = "/^ws11/";		break;
+		case ONLY_WK11:	   $regex = "/^wk11/";		break;
+		case ONLY_ED11:	   $regex = "/^ed11/";		break;
+		case ONLY_SR11:	   $regex = "/^sr11/";		break;
+		case ONLY_SV11:	   $regex = "/^sv11/";		break;
+		case ONLY_AD11:	   $regex = "/^ad11/";		break;
 		case ONLY_SM10:	   $regex = "/^sm10/";		break;
 		case ONLY_WS10:	   $regex = "/^ws10/";		break;
 		case ONLY_WK10:	   $regex = "/^wk10/";		break;
