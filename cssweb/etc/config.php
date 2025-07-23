@@ -82,17 +82,17 @@ $avail_platforms = array (
 	"p10smp" => "x86_64,i586,aarch64",
     ),
     "P11" => array (
-	"c11fws" => "x86_64,aarch64,e2kv4,e2kv5,e2kv6",
-	"c11fsrv"=> "x86_64,aarch64,e2kv4,e2kv5,e2kv6",
-	"p11ws"  => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
-	"p11edu" => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
-	"p11srv" => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
+	"c11fws" => "x86_64,aarch64,e2k,e2kv4,e2kv5,e2kv6",
+	"c11fsrv"=> "x86_64,aarch64,e2k,e2kv4,e2kv5,e2kv6",
+	"p11ws"  => "x86_64,aarch64,e2k,e2kv4,e2kv5,e2kv6",
+	"p11edu" => "x86_64,aarch64,e2k,e2kv4,e2kv5,e2kv6",
+	"p11srv" => "x86_64,aarch64,e2k,e2kv4,e2kv5,e2kv6",
     ),
     "D11" => array (
-	"p11ad"  => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
+	"p11ad"  => "x86_64,aarch64,e2k,e2kv4,e2kv5,e2kv6",
     ),
     "S11" => array (
-	"p11smp" => "x86_64,aarch64,e2kv3,e2kv4,e2kv5,e2kv6,e2kv7",
+	"p11smp" => "x86_64,aarch64,e2k,e2kv4,e2kv5,e2kv6",
     ),
 );
 
