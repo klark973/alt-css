@@ -101,8 +101,9 @@ foreach ($platf as $p) {
     $platfButtons .= '<div class="item"><a href="#">' . $p . '</a></div>';
 }
 
-$cats = array_unique($cats);
 $cats1 = [];
+$cats2 = [];
+$cats = array_unique($cats);
 foreach ($cats as $k => $cat) {
     if (strpos($cat, 'Софт ::') === 0) {
         $cats1[] = $cat;
