@@ -8,7 +8,7 @@ function img_resize($src, $dest, $width, $height, $rgb = 0xFFFFFF, $quality = 95
 	$pdf   = tempnam("", "pdf2jpeg");
 	@unlink($pdf);
 	$pdf  .= ".jpg";
-	$dummy = `convert "$src" "$pdf" 2>&1`;
+	$dummy = `magick "$src" "$pdf" 2>&1`;
 	if ($dummy) {
 	    @unlink($pdf);
 	    return false;
