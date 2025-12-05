@@ -14,7 +14,7 @@ action_summary() {
 }
 
 do_pull() {
-	local newtag oldtag=
+	local i=0 newtag oldtag=
 	local msg="can't update 'local' CSI repository."
 
 	check_local_repo
@@ -33,14 +33,21 @@ do_pull() {
 	run cd "$client_repo"/
 	run git reset --hard $quiet "$oldtag"
 	run git pull $quiet $verbose --tags origin master
-	oldtag="$(run git describe)"
-	[ "$oldtag" = "$newtag" ] ||
-		fatal "$msg"
+
+	while :; do
+		oldtag="$(run git describe)"
+		[ "$oldtag" != "$newtag" ] ||
+			break
+		[ "$i" -lt 3000 ] ||
+			fatal "$msg"
+		i="$((1 + $i))"
+		sleep .2
+	done
 
 	message "Fininshing on client-side..."
 
 	run sync
 	printf "%s\n" "$newtag" >"$cfgdir"/TAG
-	message "Last upload tag name is '$newtag'."
+	message "Last upload tag name is '$newtag', i=$i."
 }
 
