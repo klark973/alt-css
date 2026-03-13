@@ -6,7 +6,7 @@
 %endif
 
 Name: css
-Version: 1.8.6.20250710
+Version: 1.8.7.20260313
 Release: alt1
 
 Summary: Compatibility Service Suite
@@ -107,6 +107,6 @@ sed -i -e "/\/usr\/bin\/css\-sh/d" /etc/shells
 	%buildroot/var/www/html/bin
 
 %changelog
-* Thu Jul 10 2025 Leonid Krivoshein <klark@altlinux.org> 1.8.6.20250710-alt1
-- cssweb: add P11 templates and solutions
+* Fri Mar 13 2026 Leonid Krivoshein <klark@altlinux.org> 1.8.7.20260313-alt1
+- bug fixes
 
