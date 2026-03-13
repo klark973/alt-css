@@ -6,7 +6,7 @@
 # version 3, or (at your option) any later version, which
 # should be included with sources as the file COPYING.
 #
-# Copyright (C) 2021-2024, Leonid Krivoshein <klark@altlinux.org>
+# Copyright (C) 2021-2026, Leonid Krivoshein <klark@altlinux.org>
 #
 
 action_summary() {
@@ -87,6 +87,7 @@ do_moderate() {
 				awk '{print $2;}')"
 		[ "$dateNN" = "$vendID" ] ||
 			errx "VendorID ('%s') mismatch in '%s'" "$vendID" "$relpath"
+		# shellcheck disable=SC2268
 		if [ x"$certNO" != "x-" ]; then
 			dateNN="$(cat -- "$relpath" |
 					sed -n -E 's/^\s+Number:\s+(.*)$/\1/p' |
