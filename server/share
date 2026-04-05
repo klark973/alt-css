@@ -6,7 +6,7 @@
 # version 3, or (at your option) any later version, which
 # should be included with sources as the file COPYING.
 #
-# Copyright (C) 2021-2022, Leonid Krivoshein <klark@altlinux.org>
+# Copyright (C) 2021-2026, Leonid Krivoshein <klark@altlinux.org>
 #
 
 . "$CSS_LIBDIR"/csi-server-common
@@ -23,8 +23,8 @@ oldtag="$(last_upload_tag)"
 newtag="$(run git describe)"
 [ "$newtag" != "$oldtag" ] &&
 [ "$(run git tag -l 'v*' |tail -n2 |wc -l)" = 2 ] &&
-[ "$newtag" = "$(run git tag -l 'v*' |tail -n1)" ] &&
-[ "$oldtag" = "$(run git tag -l 'v*' |tail -n2 |head -n1)" ] ||
+[ "$newtag" = "$(run git tag -l 'v*' |sort -V |tail -n1)" ] &&
+[ "$oldtag" = "$(run git tag -l 'v*' |sort -V |tail -n2 |head -n1)" ] ||
 	fatal "nothing to upstream"
 expected=
 
