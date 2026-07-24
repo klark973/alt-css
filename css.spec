@@ -39,7 +39,6 @@ Requires: php8.2-mbstring
 Requires: php8.2-yaml
 Requires: rsync
 Requires: sudo
-Requires: curl
 
 %description server
 Server-side restricted shell and scripts for Compatibility Service Suite.

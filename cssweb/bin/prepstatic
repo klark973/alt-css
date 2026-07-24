@@ -6,7 +6,7 @@
 # version 3, or (at your option) any later version, which
 # should be included with sources as the file COPYING.
 #
-# Copyright (C) 2020-2025, Leonid Krivoshein <klark@altlinux.org>
+# Copyright (C) 2020-2026, Leonid Krivoshein <klark@altlinux.org>
 #
 
 . /etc/css/csi-server.conf
@@ -40,9 +40,6 @@ while read -r filename; do
 	cp -Lpf -- "$pdf" "$destdir/instr/${filename##*/}.pdf"
 done
 
-echo "Downloading BaseALT main page..."
-[ -s "$overlay"/CSI-cache/design.html ] ||
-	curl -s -o "$overlay"/CSI-cache/design.html "https://www.basealt.ru/"
 :> "$HOME"/SUCCESS
 
 echo "Creating static HTML content..."

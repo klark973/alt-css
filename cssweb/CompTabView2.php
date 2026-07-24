@@ -16,15 +16,6 @@ $NTMPSDIR = @dirname(@realpath(__FILE__))."/ntmps";
 require_once("$LIBDIR/admin/cli.php");
 require_once("$LIBDIR/admin/fatal.php");
 
-function writeMenuBlock($resp, $filename, $regexp) {
-    preg_match_all($regexp, $resp, $matches);
-    $menu = $matches[0][0];
-    $s = strlen($menu);
-    if ($s <= 3000)
-	fatal("Content is too small. It seems page is wrong. Not updated!");
-    $s = file_put_contents($filename, $menu);
-}
-
 // Parse arguments
 $platform = httpGetStr("t");
 if (!$platform || !is_dir($TDIR = "$DATADIR/History/$platform"))
@@ -56,20 +47,7 @@ else
     $fcol = "Производитель, продукт";
 $categoryClass = $productClass = $vendorClass = "";
 
-// Download and parse menu blocks only once
-if (!file_exists("$CACHEDIR/P-html-menu.php") ||
-    !file_exists("$CACHEDIR/P-html-menu-mobile.php"))
-{
-    $url = "$CACHEDIR/design.html";
-    $res = file_get_contents($url);
-    $url = "$CACHEDIR/P-html-menu.php";
-    if (!file_exists($url))
-	writeMenuBlock($res, $url, '/<ul id="main_menu">(.*)<\/ul><!-- end of main_menu -->/');
-    $url = "$CACHEDIR/P-html-menu-mobile.php";
-    if (!file_exists($url))
-	writeMenuBlock($res, $url, '/<div id="mobile_menu">(.*?)\n<\/div><!-- end of mobile_menu -->/s');
-    unset($url, $res);
-}
+// Just copy menu blocks only once
 if (!file_exists("$CACHEDIR/P-html-menu.php"))
     copy("$NTMPSDIR/P-html-menu.php", "$CACHEDIR/P-html-menu.php");
 if (!file_exists("$CACHEDIR/P-html-menu-mobile.php"))
